@@ -41,7 +41,7 @@ const LoginWindow = (props) => {
                 onSubmit={handleLogin}
                 action="/login"
                 method="POST"
-                classname="mainForm"
+                className="mainForm"
             >
             <label htmlFor="username">Username: </label>
             <input id="user" type="text" name="username" placeholder="username"/>
@@ -59,7 +59,7 @@ const SignupWindow = (props) => {
                 onSubmit={handleSignup}
                 action="/signup"
                 method="POST"
-                classname="mainForm"
+                className="mainForm"
             >
             <label htmlFor="username">Username: </label>
             <input id="user" type="text" name="username" placeholder="username"/>
