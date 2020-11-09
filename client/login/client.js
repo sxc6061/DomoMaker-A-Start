@@ -35,9 +35,10 @@ const handleSignup = (e) => {
     return false;
 };
 
-const loginWindow = (props) => {
+const LoginWindow = (props) => {
     return (
-        <form id="loginForm" name="loginForm"
+        <form id="loginForm" 
+                name="loginForm"
                 onSubmit={handleLogin}
                 action="/login"
                 method="POST"
@@ -53,9 +54,10 @@ const loginWindow = (props) => {
     );
 };
 
-const signupWindow = (props) => {
+const SignupWindow = (props) => {
     return (
-        <form id="signupForm" name="signupForm"
+        <form id="signupForm" 
+                name="signupForm"
                 onSubmit={handleSignup}
                 action="/signup"
                 method="POST"
@@ -75,14 +77,14 @@ const signupWindow = (props) => {
 
 const createLoginWindow = (csrf) => {
     ReactDOM.render(
-        <loginWindow csrf={csrf} />,
+        <LoginWindow csrf={csrf} />,
         document.querySelector('#content')
     );
 };
 
 const createSignupWindow = (csrf) => {
     ReactDOM.render(
-        <signupWindow csrf={csrf} />,
+        <SignupWindow csrf={csrf} />,
         document.querySelector('#content')
     );
 };
