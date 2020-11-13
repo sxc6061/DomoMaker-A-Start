@@ -22,7 +22,8 @@ const DomoForm = (props) => {
             name="domoForm"
             action="/maker"
             method="POST"
-            className="domoForm">
+            className="domoForm"
+        >
             <label htmlFor='name'>Name: </label>
             <input id='domoName' type='text' name='name' placeholder='Domo Name'/>
             <label htmlFor='age'>Age: </label>
@@ -73,7 +74,7 @@ const setup = function(csrf) {
     );
 
     ReactDOM.render(
-        <DomoList domos={[]}/>, document.querySelector('#makeDomo')
+        <DomoList domos={[]}/>, document.querySelector('#domos')
     );
 
     loadDomosFromServer();
