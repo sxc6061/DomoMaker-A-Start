@@ -43,6 +43,19 @@ const makeDomo = (req, res) => {
     return domoPromise;
 };
 
+const randomDomo = (req, res) => {
+    const nameField = document.querySelector("#domoName");
+    const ageField = document.querySelector("#domoName");
+    const foodField = document.querySelector("#domoName");
+
+    const randName = ["Debby", "Takashi", "Sarah", "Jason", "Yuki"];
+    const randFood = ["Ice Cream", "Pizza", "Hamburger", "Ramen", "Salad"]
+
+    nameField.value = randName[Math.floor(Math.random() * randName.length)];
+    ageField.value = Math.floor(Math.random() * Math.floor(100));
+    foodField.value = randFood[Math.floor(Math.random() * randFood.length)];
+};
+
 const getDomos = (request, response) => {
     const req = request;
     const res = response;
@@ -60,3 +73,4 @@ const getDomos = (request, response) => {
 module.exports.makerPage = makerPage;
 module.exports.make = makeDomo;
 module.exports.getDomos = getDomos;
+module.exports.randomDomo = randomDomo;
