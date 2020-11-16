@@ -37,7 +37,7 @@ const DomoForm = (props) => {
     );
 };
 
-function randomDomo() {
+const randomDomo = () => {
     const nameField = document.querySelector("#domoName");
     const ageField = document.querySelector("#domoName");
     const foodField = document.querySelector("#domoName");
@@ -48,7 +48,7 @@ function randomDomo() {
     nameField.value = randName[Math.floor(Math.random() * randName.length)];
     ageField.value = Math.floor(Math.random() * Math.floor(100));
     foodField.value = randFood[Math.floor(Math.random() * randFood.length)];
-}
+};
 
 const DomoList = function(props) {
     if(props.domos.length === 0){
