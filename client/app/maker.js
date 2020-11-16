@@ -31,11 +31,24 @@ const DomoForm = (props) => {
             <label htmlFor='favFood'>Favorite Food: </label>
             <input id='domoFood' type='text' name='favFood' placeholder='Domo Age'/>
             <input type='hidden' name='_csrf' value={props.csrf}/>
-            <input className='randomDomo' type='submit' value='Random Domo'/>
+            <input className='randomDomo' type='button' value='Random Domo' onclick={randomDomo()}/>
             <input className='makeDomoSubmit' type='submit' value='Make Domo'/>
         </form>
     );
 };
+
+function randomDomo() {
+    const nameField = document.querySelector("#domoName");
+    const ageField = document.querySelector("#domoName");
+    const foodField = document.querySelector("#domoName");
+
+    const randName = ["Debby", "Takashi", "Sarah", "Jason", "Yuki"];
+    const randFood = ["Ice Cream", "Pizza", "Hamburger", "Ramen", "Salad"]
+
+    nameField.value = randName[Math.floor(Math.random() * randName.length)];
+    ageField.value = Math.floor(Math.random() * Math.floor(100));
+    foodField.value = randFood[Math.floor(Math.random() * randFood.length)];
+}
 
 const DomoList = function(props) {
     if(props.domos.length === 0){
