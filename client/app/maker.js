@@ -39,8 +39,8 @@ const DomoForm = (props) => {
 
 const randomDomo = () => {
     const nameField = document.querySelector("#domoName");
-    const ageField = document.querySelector("#domoName");
-    const foodField = document.querySelector("#domoName");
+    const ageField = document.querySelector("#domoAge");
+    const foodField = document.querySelector("#domoFood");
 
     const randName = ["Debby", "Takashi", "Sarah", "Jason", "Yuki"];
     const randFood = ["Ice Cream", "Pizza", "Hamburger", "Ramen", "Salad"]
