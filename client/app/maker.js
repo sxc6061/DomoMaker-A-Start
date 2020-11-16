@@ -31,7 +31,7 @@ const DomoForm = (props) => {
             <label htmlFor='favFood'>Favorite Food: </label>
             <input id='domoFood' type='text' name='favFood' placeholder='Domo Age'/>
             <input type='hidden' name='_csrf' value={props.csrf}/>
-            <input className='randomDomo' type='button' value='Random Domo' onclick={randomDomo()}/>
+            <input className='randomDomo' type='button' value='Random Domo' onclick={randomDomo}/>
             <input className='makeDomoSubmit' type='submit' value='Make Domo'/>
         </form>
     );
